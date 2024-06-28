@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة وسيطة</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* خلفية داكنة */
+            color: #ffffff; /* لون نص أبيض */
+            font-family: Arial, sans-serif; /* نوع الخط */
+            text-align: center; /* توسيط النص */
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50; /* لون زر الولوج */
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049; /* لون زر الولوج عند التحويل */
+        }
+    </style>
+</head>
+<body>
+    <h1>صفحة وسيطة للتحكم في الكمبيوتر</h1>
+    <p>اضغط على الزر للسماح بالولوج والتحكم في الكمبيوتر</p>
+    <button id="accessButton">الولوج</button>
+
+    <script>
+        document.getElementById('accessButton').addEventListener('click', function() {
+            // طلب الاذن للولوج للكمبيوتر
+            var confirmed = confirm("هل ترغب في السماح بالولوج؟");
+            if (confirmed) {
+                // هنا يمكنك إضافة الكود للتحكم في الكمبيوتر
+                alert("لقد تم الولوج بنجاح!");
+            } else {
+                alert("تم رفض الولوج.");
+            }
+        });
+    </script>
+</body>
+</html>
